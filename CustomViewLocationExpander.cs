@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace CustomViews
 {
-    public class MobileViewLocationExpander : IViewLocationExpander
+    public class CustomViewLocationExpander : IViewLocationExpander
     {
         public IEnumerable<string> ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable<string> viewLocations)
         {

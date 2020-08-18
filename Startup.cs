@@ -27,7 +27,7 @@ namespace CustomViews
             services.AddSession();
             services.AddControllersWithViews().AddRazorOptions(options => 
                 {
-                    options.ViewLocationExpanders.Add(new MobileViewLocationExpander());
+                    options.ViewLocationExpanders.Add(new CustomViewLocationExpander());
                 }
             );
         }
