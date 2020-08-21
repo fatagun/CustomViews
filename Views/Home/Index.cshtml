@@ -7,4 +7,19 @@
 
     <a href="/Home/ToMobile">To Mobile View</a>
     <a href="/Home/ToTablet">To Tablet View</a>
+
+    <img id="deferme" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://upload.wikimedia.org/wikipedia/commons/3/3d/LARGE_elevation.jpg">
+
+    <script>
+        function init()
+        {
+            var imgDefer = document.getElementById('deferme');
+
+            if(imgDefer.getAttribute('data-src')) 
+            {
+                imgDefer.setAttribute('src',imgDefer.getAttribute('data-src'));
+            } 
+        }
+        window.onload = init;
+    </script>    
 </div>
