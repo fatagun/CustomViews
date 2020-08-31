@@ -21,6 +21,7 @@ namespace CustomViews
                 viewLocations = new[] {
                     $"/Views/{{1}}/{{0}}.mobile.cshtml",
                     $"/Views/Shared/{{0}}.mobile.cshtml",
+                    $"/Views/Shared/Components/{{0}}.mobile.cshtml"
                 }
                 .Concat(viewLocations);
             }
@@ -30,6 +31,7 @@ namespace CustomViews
                 viewLocations = new[] {
                     $"/Views/{{1}}/{{0}}.tablet.cshtml",
                     $"/Views/Shared/{{0}}.tablet.cshtml",
+                    $"/Views/Shared/Components/{{0}}.mobile.cshtml"
                 }
                 .Concat(viewLocations);
             }
