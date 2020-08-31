@@ -11,6 +11,9 @@ namespace CustomViews
         public IEnumerable<string> ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable<string> viewLocations)
         {
             
+             // {2} is area, {1} is controller,{0} is the action  
+             // https://stackoverflow.com/questions/36747293/how-to-specify-the-view-location-in-asp-net-core-mvc-when-using-custom-locations
+
             if(context.Values["Device"] == null)
             {
                 return viewLocations;
@@ -21,7 +24,8 @@ namespace CustomViews
                 viewLocations = new[] {
                     $"/Views/{{1}}/{{0}}.mobile.cshtml",
                     $"/Views/Shared/{{0}}.mobile.cshtml",
-                    $"/Views/Shared/Components/{{0}}.mobile.cshtml"
+                    $"/Views/Shared/Components/{{0}}.mobile.cshtml",
+                    $"/Areas/{{2}}/{{1}}/{{0}}.mobile.cshtml"
                 }
                 .Concat(viewLocations);
             }
